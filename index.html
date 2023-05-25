@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Portfolio HTML and CSS only</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <a href="#" class="logo">Lucas.</a>
+
+      <nav class="navbar">
+        <a href="#home" class="">Home</a>
+        <a href="#about" class="">About</a>
+        <a href="#portfolio" class="">Portfolio</a>
+      </nav>
+      <div class="toggle">
+        <i class="bx bx-sun toggle-icon"></i>
+      </div>
+    </header>
+    <main>
+      <section id="home" class="home">
+        <div class="home-content">
+          <h1>Hi, I'm Lucas Rojas</h1>
+          <h3>Frontend Developer</h3>
+          <p>
+            Developer since 2018. Self-taught. Coffee
+          </p>
+          <div class="btn-box">
+            <a href="./" download="Lucas_Rojas.pdf">Download CV</a>
+            <!-- <a href="">Let's talk</a> -->
+          </div>
+        </div>
+        <div class="profile-image">
+          <div class="image-circle">
+            <div class="white-space"></div>
+            <div class="image-circle-line"></div>
+            <img
+              src="https://media.licdn.com/dms/image/C5603AQFCnH9spZlPhQ/profile-displayphoto-shrink_400_400/0/1599081288192?e=1689811200&v=beta&t=sFmR0N-kSGxLlUDdlZjnc-p-yUcSp_Rb1PRPjiWn3W8"
+              alt=""
+            />
+          </div>
+        </div>
+        <div class="home-sci">
+          <a href="#"><i class="bx bxl-github"></i></a>
+          <a href="#"><i class="bx bxl-linkedin"></i></a>
+        </div>
+      </section>
+
+      <section id="about" class="about">
+        <div class="about-content">
+          <div class="left-column">
+            <ul>
+              <li><h3>ReactJs<h3></li>
+              <li><h3>Redux / Redux Thunk / Context API<h3></li>
+              <li><h3>Typescript<h3></li>
+              <li><h3>Material UI / Styled Components<h3></li>
+              <li><h3>Webpack / Babel<h3></li>
+              <li><h3>Figma / UX<h3></li>
+              <li><h3>Jest / React Testing Library<h3></li>
+              <li><h3>Amazon Web Services<h3></li>
+            </ul>
+          </div>
+
+          <div class="right-column">
+            <div class="circle">
+              <div class="item" style="--i: 0;">
+                <h3>Coding</h3>
+              </div>
+              <div class="item" style="--i: 1;">
+                <h3>Cyclism</h3>
+              </div>
+              <div class="item" style="--i: 2;">
+                <h3>Craftmen</h3>
+              </div>
+              <div class="item" style="--i: 3;">
+                <h3>Selfthought</h3>
+              </div>
+              <div class="circle-line"></div>
+            </div>
+            <div class="overlay"></div>
+            <div class="overlay-filler"></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="portfolio" class="portfolio">
+        <div class="portfolio-content">
+          <a href="https://lucaasrojas.github.io/best-timer/#/" target="_blank">
+            <div class="img-card" style="--content: 'Best Timer';">
+              <img src="./Assets/Projects/besttimer.png" alt="" />
+            </div>
+          </a>
+          <a href="https://lucaasrojas-share-wifi.netlify.app/" target="_blank">
+            <div class="img-card" style="--content: 'Share Wifi';">
+              <img src="./Assets/Projects/sharewifi.png" alt="" />
+            </div>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <script src="index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,57 @@
+.portfolio {
+  position: absolute;
+  width: 100vw;
+  left: 0;
+  max-height: 100vh;
+}
+.portfolio .portfolio-content {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  position: relative;
+}
+/* .portfolio .portfolio-content .img-card {
+  position: absolute;
+  height: 100%;
+  top: 0;
+}
+.portfolio .portfolio-content .img-card:nth-child(2) {
+  left: 33%;
+  /* clip-path: polygon(0 0, 75% 0%, 100% 100%, 25% 100%); */
+/*} 
+.portfolio .portfolio-content .img-card:nth-child(3) {
+  left: 66%;
+  /* clip-path: polygon(0 0, 100% 0%, 100% 100%, 25% 100%); */
+/*}
+.portfolio .portfolio-content .img-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+} 
+*/
+.portfolio .portfolio-content .img-card {
+  width: 100%;
+  height: 50vh;
+  background: black;
+  position: relative;
+}
+.portfolio .portfolio-content .img-card:hover::after {
+  content: var(--content);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  font-size: 64px;
+  color: white;
+  transition: 0.5s;
+}
+.portfolio .portfolio-content .img-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.portfolio .portfolio-content .img-card:hover img {
+  opacity: 0.3;
+  transition: 0.5s;
+}

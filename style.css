@@ -1,0 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+@import "./styles/home.css";
+@import "./styles/about.css";
+@import "./styles/navbar.css";
+@import "./styles/portfolio.css";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+:root {
+  --main-color: #ededed;
+  --primary-color: #081b29;
+  --secondary-color: #00abf0;
+}
+.dark-mode {
+  --main-color: #081b29;
+  --primary-color: #ededed;
+  --secondary-color: #00abf0;
+}
+body {
+  background: var(--main-color);
+  color: var(--primary-color);
+  overflow-x: hidden;
+}
+main {
+  scroll-behavior: smooth;
+}
+
+main {
+  max-width: 768px;
+  width: 100%;
+  margin: auto;
+}
+section {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+/* animaitons */
+
+@keyframes swipeRight {
+  100% {
+    width: 0;
+  }
+}
+
+/* Portfolio */
