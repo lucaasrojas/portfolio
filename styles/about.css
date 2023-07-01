@@ -1,111 +1,111 @@
 .about {
-  position: relative;
-  width: 100%;
+	position: relative;
+	width: 100%;
 }
 .about-content {
-  height: 100%;
-  width: 100%;
-  display: flex;
+	height: 100%;
+	width: 100%;
+	display: flex;
 }
 
 .about-content .left-column {
-  height: 100%;
-  width: 400px;
-  display: flex;
-  align-items: center;
+	height: 100%;
+	width: 400px;
+	display: flex;
+	align-items: center;
 }
 
 .about-content .left-column ul {
-  font-size: 16px;
-  line-height: 8vh;
+	font-size: 16px;
+	line-height: 8vh;
 }
 
 .about-content .left-column ul li::marker {
-  color: var(--secondary-color)
+	color: var(--secondary-color);
 }
 
 .about-content .right-column {
-  height: 100%;
-  width: 100%;
-  z-index: 1;
-  max-width: 368px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+	height: 100%;
+	width: 100%;
+	z-index: 1;
+	max-width: 368px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 .about-content .right-column .circle {
-  height: 320px;
-  width: 320px;
-  border-radius: 50%;
-  display: flex;
-  position: relative;
-  justify-content: center;
-  align-items: center;
-  animation: rotateCircle 20s ease-out infinite;
+	height: 320px;
+	width: 320px;
+	border-radius: 50%;
+	display: flex;
+	position: relative;
+	justify-content: center;
+	align-items: center;
+	animation: rotateCircle 20s ease-out infinite;
 }
 
 .about-content .right-column .circle-line {
-  width: 75%;
-  height: 75%;
-  border: 4px solid var(--secondary-color);
-  border-radius: 50%;
+	width: 75%;
+	height: 75%;
+	border: 4px solid var(--secondary-color);
+	border-radius: 50%;
 }
 
 .about-content .right-column .circle .item {
-  position: absolute;
-  transform-origin: 160px; /* mitad del circulo*/
-  left: 0;
-  transform: rotate(calc(360deg / 4 * var(--i)));
-  background: var(--main-color);
+	position: absolute;
+	transform-origin: 160px; /* mitad del circulo*/
+	left: 0;
+	transform: rotate(calc(360deg / 4 * var(--i)));
+	background: var(--main-color);
 }
 
 .about-content .right-column .overlay {
-  position: absolute;
-  /* top: 0; */
-  right: 0;
-  /* width: 236px; */
-  /* height: 229px; */
-  border-top: 50vh solid var(--primary-color);
-  border-right: 184px solid var(--primary-color);
-  border-bottom: 50vh solid var(--primary-color);
-  border-left: 150px solid transparent;
+	position: absolute;
+	/* top: 0; */
+	right: 0;
+	/* width: 236px; */
+	/* height: 229px; */
+	border-top: 50vh solid var(--primary-color);
+	border-right: 184px solid var(--primary-color);
+	border-bottom: 50vh solid var(--primary-color);
+	border-left: 150px solid transparent;
 }
 
 .about-content .right-column .overlay-filler {
-  position: absolute;
-  /* top: 0; */
-  right: calc(-50vw);
+	position: absolute;
+	/* top: 0; */
+	right: calc(-50vw);
 
-  width: 50vw;
-  height: 100vh;
-  background: var(--primary-color);
+	width: 50vw;
+	height: 100vh;
+	background: var(--primary-color);
 }
 
-
 @keyframes rotateCircle {
-  0%,
-  20% {
-    transform: rotate(0deg);
-  }
-  25%,
-  45% {
-    transform: rotate(-90deg);
-  }
-  50%,
-  70% {
-    transform: rotate(-180deg);
-  }
-  75%,
-  90% {
-    transform: rotate(-270deg);
-  }
-  100% {
-    transform: rotate(-360deg);
-  }
+	0%,
+	20% {
+		transform: rotate(0deg);
+	}
+	25%,
+	45% {
+		transform: rotate(-90deg);
+	}
+	50%,
+	70% {
+		transform: rotate(-180deg);
+	}
+	75%,
+	90% {
+		transform: rotate(-270deg);
+	}
+	100% {
+		transform: rotate(-360deg);
+	}
 }
 
 @keyframes rotateProfileCircle {
-  100% {
-    transform: rotate(360deg);
-  }
+	100% {
+		transform: rotate(360deg);
+	}
+}

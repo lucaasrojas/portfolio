@@ -1,14 +1,14 @@
 .portfolio {
-  position: absolute;
-  width: 100vw;
-  left: 0;
-  max-height: 100vh;
+	position: absolute;
+	width: 100vw;
+	left: 0;
+	max-height: 100vh;
 }
 .portfolio .portfolio-content {
-  height: 100%;
-  width: 100%;
-  display: grid;
-  position: relative;
+	height: 100%;
+	width: 100%;
+	display: grid;
+	position: relative;
 }
 /* .portfolio .portfolio-content .img-card {
   position: absolute;
@@ -30,28 +30,44 @@
 } 
 */
 .portfolio .portfolio-content .img-card {
-  width: 100%;
-  height: 50vh;
-  background: black;
-  position: relative;
+	width: 100%;
+	height: 50vh;
+	background: black;
+	position: relative;
 }
 .portfolio .portfolio-content .img-card:hover::after {
-  content: var(--content);
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  position: absolute;
-  font-size: 64px;
-  color: white;
-  transition: 0.5s;
+	content: var(--content);
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	position: absolute;
+	font-size: 64px;
+	color: white;
+	transition: 0.5s;
 }
 .portfolio .portfolio-content .img-card img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
 }
 
 .portfolio .portfolio-content .img-card:hover img {
-  opacity: 0.3;
-  transition: 0.5s;
+	opacity: 0.3;
+	transition: 0.5s;
+}
+
+.portfolio .portfolio-content .proyect-card {
+	display: flex;
+}
+.portfolio .portfolio-content .proyect-card > a {
+	flex: 1;
+}
+
+.portfolio .portfolio-content .proyect-card .card-content {
+	flex: 1;
+	padding: 30px 10px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }

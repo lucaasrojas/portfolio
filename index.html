@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Portfolio HTML and CSS only</title>
+    <title>Lucas Rojas</title>
     <link rel="stylesheet" href="style.css" />
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
@@ -41,10 +41,13 @@
           <div class="image-circle">
             <div class="white-space"></div>
             <div class="image-circle-line"></div>
-            <img
-              src="https://media.licdn.com/dms/image/C5603AQFCnH9spZlPhQ/profile-displayphoto-shrink_400_400/0/1599081288192?e=1689811200&v=beta&t=sFmR0N-kSGxLlUDdlZjnc-p-yUcSp_Rb1PRPjiWn3W8"
+            <div class="image-wrapper">
+
+              <img
+              src="./Assets/common/profile_pic.jpg"
               alt=""
-            />
+              />
+            </div>
           </div>
         </div>
         <div class="home-sci">
@@ -92,17 +95,58 @@
 
       <section id="portfolio" class="portfolio">
         <div class="portfolio-content">
-          <a href="https://lucaasrojas.github.io/best-timer/#/" target="_blank">
-            <div class="img-card" style="--content: 'Best Timer';">
-              <img src="./Assets/Projects/besttimer.png" alt="" />
-            </div>
-          </a>
-          <a href="https://lucaasrojas-share-wifi.netlify.app/" target="_blank">
-            <div class="img-card" style="--content: 'Share Wifi';">
-              <img src="./Assets/Projects/sharewifi.png" alt="" />
-            </div>
-          </a>
-        </div>
+          <project-card
+            data-title="Best Timer"
+            data-description="Minimalistic Timer | ReactJS"
+            data-linkRepo="https://github.com/lucaasrojas/best-timer"
+            data-linkSite="https://lucaasrojas-expense-tracker.netlify.app/"
+            data-img="./Assets/Projects/expense_tracker.png"
+          ></project-card>
+          <project-card
+          data-title="Share your WiFi"
+          data-description="Share you WiFi credentials easily | ReactJS"
+          data-linkRepo="https://github.com/lucaasrojas/qrcode-wifi"
+          data-linkSite="https://lucaasrojas-share-wifi.netlify.app/"
+          data-img="./Assets/Projects/sharewifi.png"
+        ></project-card>
+        <project-card
+        data-title="Expense Tracker"
+        data-description="Manage your expenses with this tool | ReactJS - Material UI"
+        data-linkRepo="https://github.com/lucaasrojas/expense-tracker"
+        data-linkSite="https://lucaasrojas-expense-tracker.netlify.app/"
+        data-img="./Assets/Projects/expense_tracker.png"
+      ></project-card>
+      <project-card
+      data-title="Food Order"
+      data-description="Forget to cook, order your meal | ReactJS "
+      data-linkRepo="https://github.com/lucaasrojas/react-food-order"
+      data-linkSite="https://lucaasrojas-food-order.netlify.app/"
+      data-img="./Assets/Projects/food_order.png"
+    ></project-card>
+    <project-card
+    data-title="Stickit Notes"
+    data-description="Just notes | Vanilla JS"
+    data-linkRepo="https://github.com/lucaasrojas/stickynotes_vanillajs"
+    data-linkSite="https://lucaasrojas-sticky-notes.netlify.app/"
+    data-img="./Assets/Projects/stickit_notes.png"
+  ></project-card>
+  <project-card
+  data-title="Calculator"
+  data-description=" Nothing else to say | ReactJs"
+  data-linkRepo="https://github.com/lucaasrojas/React-Calculator"
+  data-linkSite="https://lucaasrojas-calculator.netlify.app/"
+  data-img="./Assets/Projects/calculator.png"
+></project-card>
+<project-card
+data-title="PokeDex"
+data-description="Track your pokemons | ReactJs"
+data-linkRepo="https://github.com/lucaasrojas/pokedex"
+data-linkSite="https://lucaasrojas-pokedex.netlify.app/"
+data-img="./Assets/Projects/pokedex.png"
+></project-card>
+
+    
+    </div>
       </section>
     </main>
 
