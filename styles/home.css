@@ -115,11 +115,8 @@
 	width: auto;
 	padding: 0px 10px;
 	height: 100%;
-	background: var(--secondary-color);
-	border: 2px solid var(--secondary-color);
 	border-radius: 8px;
 	font-size: 19px;
-	color: var(--main-color);
 	text-decoration: none;
 	font-weight: 600;
 	letter-spacing: 1px;
@@ -160,6 +157,18 @@
 
 .btn-box a:hover::before {
 	width: 100%;
+}
+
+.btn-box > a .secondary {
+	background-color: var(--main-color);
+	border: 2px solid var(--secondary-color);
+	color: var(--secondary-color);
+}
+
+.btn-box > a .primary {
+	background: var(--secondary-color);
+	border: 2px solid var(--secondary-color);
+	color: var(--main-color);
 }
 
 .profile-image img {

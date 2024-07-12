@@ -5,47 +5,108 @@
 @import "./styles/portfolio.css";
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Poppins", sans-serif;
 }
 :root {
-  --main-color: #ededed;
-  --primary-color: #081b29;
-  --secondary-color: #00abf0;
+	--main-color: #ededed;
+	--primary-color: #081b29;
+	--secondary-color: #00abf0;
 }
 .dark-mode {
-  --main-color: #081b29;
-  --primary-color: #ededed;
-  --secondary-color: #00abf0;
+	--main-color: #081b29;
+	--primary-color: #ededed;
+	--secondary-color: #00abf0;
 }
 body {
-  background: var(--main-color);
-  color: var(--primary-color);
-  overflow-x: hidden;
+	background: var(--main-color);
+	color: var(--primary-color);
+	overflow-x: hidden;
 }
 main {
-  scroll-behavior: smooth;
+	scroll-behavior: smooth;
 }
 
 main {
-  max-width: 768px;
-  width: 100%;
-  margin: auto;
+	max-width: 768px;
+	width: 100%;
+	margin: auto;
 }
 section {
-  height: 100vh;
-  display: flex;
-  align-items: center;
+	height: 100vh;
+	display: flex;
+	align-items: center;
 }
 
 /* animaitons */
 
 @keyframes swipeRight {
-  100% {
-    width: 0;
-  }
+	100% {
+		width: 0;
+	}
 }
 
-/* Portfolio */
+.btn-box a {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	width: auto;
+	padding: 0px 10px;
+	height: 100%;
+	border-radius: 8px;
+	font-size: 19px;
+	text-decoration: none;
+	font-weight: 600;
+	letter-spacing: 1px;
+	overflow: hidden;
+	position: relative;
+	z-index: 1;
+	transition: 0.5s;
+}
+
+.btn-box a::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 0;
+	height: 100%;
+
+	z-index: -1;
+	transition: 0.5s;
+}
+
+.btn-box a:hover::before {
+	width: 100%;
+}
+
+.btn-box > a.btn.primary {
+	background: var(--secondary-color);
+	border: 2px solid var(--secondary-color);
+	color: var(--main-color);
+}
+.btn-box a.btn.primary::before {
+	background: var(--main-color);
+}
+.btn-box a.btn.primary:hover {
+	color: var(--secondary-color);
+}
+.btn-box a.btn.secondary:hover {
+	color: var(--main-color);
+}
+
+.btn-box > a.btn.secondary {
+	background-color: var(--main-color);
+	border: 2px solid var(--secondary-color);
+	color: var(--secondary-color);
+}
+.btn-box a.btn.secondary::before {
+	background: var(--secondary-color);
+}
+
+.toggle {
+	cursor: pointer;
+	transition: 2s;
+}

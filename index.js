@@ -30,14 +30,21 @@ class ProjectCard extends HTMLElement {
 
     this.cardDescription = document.createElement("p")
 
-    this.cardLinks = document.createElement("p")
-    this.anchorRepo = Object.assign(document.createElement("a"), { target: "_blank" })
-    this.anchorRepo.innerText = "Repo"
-    this.anchorSite = Object.assign(document.createElement("a"), { target: "_blank" })
-    this.anchorSite.innerText = "Site"
+    this.cardLinks = Object.assign(document.createElement("div"), { style: "display:flex;gap:10px; " })
 
-    this.cardLinks.appendChild(this.anchorRepo)
-    this.cardLinks.appendChild(this.anchorSite)
+    this.repoBox = Object.assign(document.createElement("div"), { classList: "btn-box" })
+    this.siteBox = Object.assign(document.createElement("div"), { classList: "btn-box" })
+
+    this.anchorRepo = Object.assign(document.createElement("a"), { target: "_blank", classList: "btn secondary" })
+    this.anchorRepo.innerText = "Repo"
+    this.repoBox.appendChild(this.anchorRepo)
+
+    this.anchorSite = Object.assign(document.createElement("a"), { target: "_blank", classList: "btn primary" })
+    this.anchorSite.innerText = "Site"
+    this.siteBox.appendChild(this.anchorSite)
+
+    this.cardLinks.appendChild(this.repoBox)
+    this.cardLinks.appendChild(this.siteBox)
 
     this.cardContent.appendChild(this.cardTitle)
     this.cardContent.appendChild(this.cardDescription)
@@ -65,5 +72,40 @@ class ProjectCard extends HTMLElement {
     this.img.src = img
   }
 }
+
+
+function parseCSVtoJSON(csvData) {
+  const lines = csvData.trim().split('\r\n');
+  const headers = lines[0].split(',');
+
+  const projects = lines.slice(1).map(line => {
+    const values = line.split(',');
+    let project = {};
+    headers.forEach((header, index) => {
+      project[header] = values[index];
+    });
+    return project;
+  });
+
+  return projects;
+}
+fetch("https://docs.google.com/spreadsheets/d/16Dautg48PL9T4jjyEWb-mUtozgVlDCBJkyObQA9psS8/export?format=csv")
+  .then(res => res.text())
+  .then(res => {
+    const projectList = parseCSVtoJSON(res)
+    const projectContainer = document.getElementById("portfolio-content")
+    projectList.forEach(project => {
+      const div = document.createElement("div", { classList: ["project-card"] })
+      const child = new ProjectCard()
+
+      child.setAttribute("data-title", project.title)
+      child.setAttribute("data-description", project.description)
+      child.setAttribute("data-linkRepo", project.repoLink)
+      child.setAttribute("data-linkSite", project.siteLink)
+      child.setAttribute("data-img", project.image)
+      div.appendChild(child)
+      projectContainer.appendChild(div)
+    })
+  })
 
 customElements.define("project-card", ProjectCard)
