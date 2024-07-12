@@ -16,6 +16,7 @@ class ProjectCard extends HTMLElement {
     shadow.innerHTML = `
     <style> 
     @import "./styles/ProjectCard.css";
+    @import "./style.css";
     </style>
     `
     this.wrapper.setAttribute("class", "proyect-card")
